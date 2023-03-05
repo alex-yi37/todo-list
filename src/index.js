@@ -11,4 +11,4 @@ function hiCuh(name) {
 
 hiCuh()
 
-hiCuh("nataly")
+hiCuh("nataly cuh")
