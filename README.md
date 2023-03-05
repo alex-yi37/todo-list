@@ -18,3 +18,7 @@
 7. (Stretch goal) User can rearrange order of todos
     1. Think of UX later
 8. (Stretch goal) play an animation when user completes a todo
+
+## Pictures
+
+Rough [sketch of main page](https://github.com/alex-yi37/todo-list/pull/2#issuecomment-1455209973)
