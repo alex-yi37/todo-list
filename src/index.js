@@ -1,14 +1,33 @@
-function hiCuh(name) {
-    if (!name) {
-        console.log("hello cuh without name")
-        return
-    }
+function main() {
+    const todoList = []
 
-    console.log(`hi cuh ${name}`)
-
-    return `hi cuh ${name}`
+    setUpCreateForm(todoList)
 }
 
-hiCuh()
+function setUpCreateForm(todos) {
+    // add "submit" event listener to the form
+    const createForm = document.querySelector("#create-todo-form")
 
-hiCuh("nataly")
+    createForm.addEventListener("submit", function(event) {
+        event.preventDefault()
+
+        const formData = new FormData(createForm)
+
+        const todoObject = {}
+
+        for (const formValue of formData.entries()) {
+            if (formValue[0] === "title") {
+                todoObject.title = formValue[1]
+            }
+            if (formValue[0] === "description") {
+                todoObject.description = formValue[1]
+            }
+        }
+
+        todos.push(todoObject)
+
+        createForm.reset()
+    })
+}
+
+main()
