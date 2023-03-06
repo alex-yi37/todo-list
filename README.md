@@ -22,4 +22,4 @@
 ## Pictures
 
 - Rough [sketch of main page](https://github.com/alex-yi37/todo-list/pull/2#issuecomment-1455209973)
-- Figma Draft [prototype on Figma](https://www.figma.com/file/AtaXLmIsg2tJjRSEkQvnZj/Todo-List-App-Prototype?node-id=0%3A1&t=vpUNhxZwgJfFaCAQ-1)
+- Figma Draft [prototype](https://www.figma.com/file/AtaXLmIsg2tJjRSEkQvnZj/Todo-List-App-Prototype?node-id=0%3A1&t=vpUNhxZwgJfFaCAQ-1)
