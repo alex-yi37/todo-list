@@ -15,3 +15,5 @@ function main() {
 function displayTitleDescriptionInfo(response) {
     
 }
+
+main()
