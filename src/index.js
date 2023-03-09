@@ -11,3 +11,7 @@ function main() {
       document.querySelector("#todo-description-input").value = "";
     });
 }
+
+function displayTitleDescriptionInfo(response) {
+    
+}
