@@ -1,33 +1,13 @@
 function main() {
-    const todoList = []
-
-    setUpCreateForm(todoList)
+  let todoList = [];
+  document
+    .querySelector("#create-todo-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      let title = document.querySelector("#todo-title-input").value;
+      let description = document.querySelector("#todo-description-input").value;
+      todoList.push({ title, description });
+      document.querySelector("#todo-title-input").value = "";
+      document.querySelector("#todo-description-input").value = "";
+    });
 }
-
-function setUpCreateForm(todos) {
-    // add "submit" event listener to the form
-    const createForm = document.querySelector("#create-todo-form")
-
-    createForm.addEventListener("submit", function(event) {
-        event.preventDefault()
-
-        const formData = new FormData(createForm)
-
-        const todoObject = {}
-
-        for (const formValue of formData.entries()) {
-            if (formValue[0] === "title") {
-                todoObject.title = formValue[1]
-            }
-            if (formValue[0] === "description") {
-                todoObject.description = formValue[1]
-            }
-        }
-
-        todos.push(todoObject)
-
-        createForm.reset()
-    })
-}
-
-main()
