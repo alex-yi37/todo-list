@@ -19,16 +19,29 @@ function displayTitleDescriptionInfo(response) {}
 function appendTodo(title, description) {
   // 1. create a new li tag
 
-  const newTodoElement = document.createElement("li");
+  const titleContainer = document.createElement("div");
+
+  let todoListContainer = document.querySelector("#todo-container"); //parent
+
+  const newTodoElement = document.createElement("li"); //child
+
+  const deleteButton = document.createElement("button");
   // 2. set the text inside
+
+  deleteButton.addEventListener("click", function () {
+    todoListContainer.removeChild(newTodoElement);
+  });
 
   let titleTodo = document.createElement("h3");
   titleTodo.textContent = `${title}`;
-  newTodoElement.appendChild(titleTodo);
+  titleContainer.appendChild(titleTodo);
+  titleContainer.appendChild(deleteButton);
+  newTodoElement.appendChild(titleContainer);
 
   let descriptionTodo = document.createElement("p");
   descriptionTodo.textContent = `${description}`;
   newTodoElement.appendChild(descriptionTodo);
+  deleteButton.textContent = "delete";
 
   // 3. get the ul element that has all the todo li elements
   const ulContainer = document.querySelector("#todo-container");
