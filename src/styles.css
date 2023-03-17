@@ -3,6 +3,15 @@ p {
   text-align: center;
 }
 
+h1 {
+  font-family: "Pacifico", cursive;
+}
+
+h3,
+p {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
 form {
   display: flex;
   flex-direction: column;
