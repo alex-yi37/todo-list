@@ -1,3 +1,8 @@
+h1,
+p {
+  text-align: center;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -13,8 +18,4 @@ div {
 
 li {
   list-style: none;
-}
-
-p {
-  text-align: center;
 }
