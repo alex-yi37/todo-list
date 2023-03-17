@@ -22,6 +22,7 @@ function appendTodo(title, description) {
   const todoListContainer = document.querySelector("#todo-container"); //parent
   const newTodoElement = document.createElement("li"); //child
   const titleContainer = document.createElement("div");
+  titleContainer.className = "todo-item";
   const deleteButton = document.createElement("button");
 
   // remove contents inside li tag

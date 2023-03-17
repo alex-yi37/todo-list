@@ -33,3 +33,13 @@ div {
 li {
   list-style: none;
 }
+
+.todo-item {
+  border: 2px black solid;
+  width: 240px;
+  margin: 10px;
+}
+
+.add-button {
+  border-radius: 10px;
+}
