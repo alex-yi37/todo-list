@@ -17,7 +17,7 @@ function main() {
 function displayTitleDescriptionInfo(response) {}
 
 function appendTodo(title, description) {
-  // 1. create a new li tag
+  // create a new div, li, ul tag
 
   const titleContainer = document.createElement("div");
 
@@ -25,8 +25,11 @@ function appendTodo(title, description) {
 
   const newTodoElement = document.createElement("li"); //child
 
+  // set the text inside
+
   const deleteButton = document.createElement("button");
-  // 2. set the text inside
+
+  //delete li
 
   deleteButton.addEventListener("click", function () {
     todoListContainer.removeChild(newTodoElement);
