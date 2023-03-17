@@ -1,4 +1,4 @@
-//select form and label w/o webpage refreshing, returning their input values to be inserted
+// select form and label w/o webpage refreshing, returning their input values to be inserted
 function main(response) {
   document
     .querySelector("#create-todo-form")
@@ -29,12 +29,12 @@ function appendTodo(title, description) {
     todoListContainer.removeChild(newTodoElement);
   });
 
-  //create a new h3 and p tag, select ul tag
+  // create a new h3 and p tag, select ul tag
   const titleTodo = document.createElement("h3");
   const descriptionTodo = document.createElement("p");
   const ulContainer = document.querySelector("#todo-container");
 
-  //Add content to h3 and p tag
+  // add content to h3 and p tag
   titleTodo.textContent = `${title}`;
   descriptionTodo.textContent = `${description}`;
 
@@ -46,7 +46,7 @@ function appendTodo(title, description) {
   // set text inside button
   deleteButton.textContent = "delete";
 
-  // 3. select ul element that has all the todo li elements
+  // select ul element that has all the todo li elements
 
   // append the new li tag to the ul
   ulContainer.appendChild(newTodoElement);
