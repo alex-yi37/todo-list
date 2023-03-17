@@ -38,8 +38,16 @@ li {
   border: 2px black solid;
   width: 240px;
   margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
 .add-button {
   border-radius: 10px;
+}
+
+.todo-header {
+  display: flex;
+  flex-direction: row;
 }

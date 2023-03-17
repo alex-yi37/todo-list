@@ -20,37 +20,52 @@ function main(response) {
 // select ul, create a new li, div and button tag
 function appendTodo(title, description) {
   const todoListContainer = document.querySelector("#todo-container"); //parent
+
+  // li
   const newTodoElement = document.createElement("li"); //child
+
+  // outer div contains everything
+  const todoWrapper = document.createElement("div");
+  todoWrapper.className = "todo-item";
+
+  // nested div to todoWrapper, contains title and delete button
   const titleContainer = document.createElement("div");
-  titleContainer.className = "todo-item";
+  titleContainer.className = "todo-header";
+
+  // create a new h3 and button tag, select ul tag
+  const titleTodo = document.createElement("h3");
+  // set the text content for the title
+  titleTodo.textContent = `${title}`;
+
   const deleteButton = document.createElement("button");
+  // set text inside delete button
+  deleteButton.textContent = "Delete";
+
+  // append title and delete button to titleContainer
+  titleContainer.appendChild(titleTodo);
+  titleContainer.appendChild(deleteButton);
+
+  // append titleContainer to todoWrapper
+  todoWrapper.appendChild(titleContainer);
+
+  // append todoWrapper to li aka newTodoElement
+  newTodoElement.appendChild(todoWrapper);
+
+  // append newTodoElement to ul aka todoListContainer
+  todoListContainer.appendChild(newTodoElement);
+
+  // create description for todo
+  const descriptionTodo = document.createElement("p");
+  // then change its text content
+  descriptionTodo.textContent = `${description}`;
+
+  // append description to todoWrapper
+  todoWrapper.appendChild(descriptionTodo);
 
   // remove contents inside li tag
   deleteButton.addEventListener("click", function () {
     todoListContainer.removeChild(newTodoElement);
   });
-
-  // create a new h3 and p tag, select ul tag
-  const titleTodo = document.createElement("h3");
-  const descriptionTodo = document.createElement("p");
-  const ulContainer = document.querySelector("#todo-container");
-
-  // add content to h3 and p tag
-  titleTodo.textContent = `${title}`;
-  descriptionTodo.textContent = `${description}`;
-
-  newTodoElement.appendChild(titleContainer); // append div tag to li
-  titleContainer.appendChild(titleTodo); // append h3 tag to div
-  titleContainer.appendChild(descriptionTodo); // append p tag to div
-  titleContainer.appendChild(deleteButton); // append button tag to div
-
-  // set text inside button
-  deleteButton.textContent = "delete";
-
-  // select ul element that has all the todo li elements
-
-  // append the new li tag to the ul
-  ulContainer.appendChild(newTodoElement);
 }
 
 main();
