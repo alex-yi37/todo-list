@@ -11,7 +11,7 @@
 4. User can complete a todo by checking a checkbox
    1. Should show some styling to indicate it is completed
 5. User can uncomplete a todo by unchecking a checkbox
-   1. Should remove the todo from the list of todos
+   1. Should remove the styling from completing the todo
 6. User can edit a todo by clicking an edit button next to the todo
    1. User is navigated to a form
    2. Form is auto-filled with the todo title and description
