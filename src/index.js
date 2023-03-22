@@ -17,6 +17,8 @@ function main(response) {
     });
 }
 
+// functionality to delete a todo referenced from this Stack Overflow thread:
+// https://stackoverflow.com/a/69658354
 // select ul, create a new li, div and button tag
 function appendTodo(title, description) {
   const todoListContainer = document.querySelector("#todo-container"); //parent
