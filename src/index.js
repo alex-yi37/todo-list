@@ -35,11 +35,21 @@ function appendTodo(title, description) {
   // create a new h3 and button tag, select ul tag
   const titleTodo = document.createElement("h3");
   // set the text content for the title
-  titleTodo.textContent = `${title}`;
+  titleTodo.textContent = title;
 
   const deleteButton = document.createElement("button");
   // set text inside delete button
   deleteButton.textContent = "Delete";
+
+  // create the footer container
+  const footerContainer = document.createElement("div");
+
+  // set text inside complete button
+  const completeButton = document.createElement("button");
+  completeButton.textContent = "Complete";
+
+  // append selectButton to footerContainer
+  footerContainer.appendChild(completeButton);
 
   // append title and delete button to titleContainer
   titleContainer.appendChild(titleTodo);
@@ -61,6 +71,8 @@ function appendTodo(title, description) {
 
   // append description to todoWrapper
   todoWrapper.appendChild(descriptionTodo);
+  todoWrapper.appendChild(footerContainer);
+  footerContainer.className = "footer-row";
 
   // remove contents inside li tag
   deleteButton.addEventListener("click", function () {

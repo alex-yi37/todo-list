@@ -53,3 +53,10 @@ li {
   width: 100%;
   justify-content: space-between;
 }
+
+.footer-row {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: end;
+}
