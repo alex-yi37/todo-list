@@ -24,6 +24,10 @@ form {
   gap: 8px;
 }
 
+label {
+  display: contents;
+}
+
 div {
   display: flex;
   flex-direction: column;
