@@ -50,8 +50,12 @@ function appendTodo(title, description) {
   const completeButton = document.createElement("button");
   completeButton.textContent = "Complete";
 
+  //create the description container
+  const descriptionContainer = document.createElement("div");
+
   // append selectButton to footerContainer
   footerContainer.appendChild(completeButton);
+  footerContainer.className = "footer-row";
 
   // append title and delete button to titleContainer
   titleContainer.appendChild(titleTodo);
@@ -74,7 +78,6 @@ function appendTodo(title, description) {
   // append description to todoWrapper
   todoWrapper.appendChild(descriptionTodo);
   todoWrapper.appendChild(footerContainer);
-  footerContainer.className = "footer-row";
 
   // remove contents inside li tag
   deleteButton.addEventListener("click", function () {
