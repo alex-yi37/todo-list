@@ -88,6 +88,10 @@ function appendTodo(title, description) {
   deleteButton.addEventListener("click", function () {
     todoListContainer.removeChild(newTodoElement);
   });
+
+  completeButton.addEventListener("click", function () {
+    todoListContainer.classList.add("completed");
+  });
 }
 
 main();
