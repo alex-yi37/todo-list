@@ -63,6 +63,14 @@ li {
   justify-content: space-between;
 }
 
+.todo-description {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  height: 40px;
+}
+
 .footer-row {
   display: flex;
   width: 100%;

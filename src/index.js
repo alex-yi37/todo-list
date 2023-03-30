@@ -43,26 +43,36 @@ function appendTodo(title, description) {
   // set text inside delete button
   deleteButton.textContent = "Delete";
 
+  //create the description container
+  const descriptionContainer = document.createElement("div");
+  descriptionContainer.className = "todo-description";
+
   // create the footer container
   const footerContainer = document.createElement("div");
+  footerContainer.className = "footer-row";
 
-  // set text inside complete button
+  // set text inside and add content to complete button
   const completeButton = document.createElement("button");
   completeButton.textContent = "Complete";
 
-  //create the description container
-  const descriptionContainer = document.createElement("div");
+  // create a new p tag and add text content
+  const descriptionTodo = document.createElement("p");
+  // then change its text content
+  descriptionTodo.textContent = `${description}`;
 
-  // append selectButton to footerContainer
+  // append description to descriptionContainer
+  descriptionContainer.appendChild(descriptionTodo);
+
+  // append complete Button to footerContainer
   footerContainer.appendChild(completeButton);
-  footerContainer.className = "footer-row";
 
   // append title and delete button to titleContainer
   titleContainer.appendChild(titleTodo);
   titleContainer.appendChild(deleteButton);
 
-  // append titleContainer to todoWrapper
+  // append title and description to todoWrapper
   todoWrapper.appendChild(titleContainer);
+  todoWrapper.appendChild(descriptionContainer);
 
   // append todoWrapper to li aka newTodoElement
   newTodoElement.appendChild(todoWrapper);
@@ -70,13 +80,8 @@ function appendTodo(title, description) {
   // append newTodoElement to ul aka todoListContainer
   todoListContainer.appendChild(newTodoElement);
 
-  // create description for todo
-  const descriptionTodo = document.createElement("p");
-  // then change its text content
-  descriptionTodo.textContent = `${description}`;
-
   // append description to todoWrapper
-  todoWrapper.appendChild(descriptionTodo);
+  todoWrapper.appendChild(descriptionContainer);
   todoWrapper.appendChild(footerContainer);
 
   // remove contents inside li tag
