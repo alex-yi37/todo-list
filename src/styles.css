@@ -11,6 +11,11 @@ h1 {
   font-family: "Pacifico", cursive;
 }
 
+textarea,
+input {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
 h3,
 p {
   font-family: "Yanone Kaffeesatz", sans-serif;
@@ -26,6 +31,7 @@ form {
 
 label {
   display: contents;
+  font-family: "Pacifico", cursive;
 }
 
 div {
@@ -51,9 +57,11 @@ li {
   align-items: start;
 }
 
-.add-button {
+button {
   border-radius: 10px;
   font-family: "Pacifico", cursive;
+  border: 2px solid rgb(73, 138, 198);
+  background: rgb(217, 206, 165);
 }
 
 .todo-header {
