@@ -90,7 +90,8 @@ function appendTodo(title, description) {
   });
 
   completeButton.addEventListener("click", function () {
-    todoListContainer.classList.add("completed");
+    descriptionContainer.classList.add("completed");
+    titleTodo.classList.add("completed");
   });
 }
 
