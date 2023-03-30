@@ -90,8 +90,38 @@ function appendTodo(title, description) {
   });
 
   completeButton.addEventListener("click", function () {
-    descriptionContainer.classList.add("completed");
-    titleTodo.classList.add("completed");
+    // how do we know if the todo has been completed by the time
+    // someone clicks the "complete/uncomplete" button?
+
+    // try to determine if descriptionTodoContainer has the "completed" class. If it does, that means the todo has
+    // been completed
+    // if it does NOT, then we know that the todo has not yet been completed
+    let isTodoCompleted = false;
+
+    const todoClasses = descriptionContainer.classList;
+
+    for (let i = 0; i < todoClasses.length; i++) {
+      const className = todoClasses[i];
+
+      if (className === "completed") {
+        isTodoCompleted = true;
+        break;
+      }
+    }
+
+    // if todo has not yet been completed and the user clicks the complete button, we want to add a strike through
+    // to the title and description, and change button text to "Uncomplete"
+    if (!isTodoCompleted) {
+      descriptionContainer.classList.add("completed");
+      titleTodo.classList.add("completed");
+      completeButton.textContent = "Uncomplete";
+    } else {
+      // if todo HAS already been completed and the user clicks the uncomplete button, we want to remove the strike through
+      // styling and also set the button text to be "Complete"
+      descriptionContainer.classList.remove("completed");
+      titleTodo.classList.remove("completed");
+      completeButton.textContent = "Complete";
+    }
   });
 }
 
