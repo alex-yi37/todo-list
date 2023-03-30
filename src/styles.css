@@ -1,5 +1,5 @@
 body {
-  background: #00a1ab87;
+  background: rgb(191, 224, 255);
 }
 
 h1,
@@ -34,13 +34,17 @@ div {
   align-items: center;
 }
 
+ul {
+  padding-left: 0%;
+}
+
 li {
   list-style: none;
 }
 
 .todo-item {
   border: 2px black solid;
-  width: 240px;
+  width: 260px;
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -49,6 +53,7 @@ li {
 
 .add-button {
   border-radius: 10px;
+  font-family: "Pacifico", cursive;
 }
 
 .todo-header {
