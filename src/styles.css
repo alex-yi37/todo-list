@@ -29,6 +29,10 @@ form {
   gap: 8px;
 }
 
+form:invalid input[type="submit"] {
+  background-color: red;
+}
+
 label {
   display: contents;
   font-family: "Pacifico", cursive;
