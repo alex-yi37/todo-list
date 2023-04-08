@@ -13,6 +13,10 @@ function main(response) {
       document.querySelector("#todo-title-input").value = "";
       document.querySelector("#todo-description-input").value = "";
 
+      if (title == "") {
+        alert("Error, please input a value");
+      }
+
       appendTodo(title, description);
     });
 }
@@ -124,7 +128,5 @@ function appendTodo(title, description) {
     }
   });
 }
-
-function fillTodo()
 
 main();
