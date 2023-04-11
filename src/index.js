@@ -13,7 +13,7 @@ function main(response) {
       document.querySelector("#todo-title-input").value = "";
       document.querySelector("#todo-description-input").value = "";
 
-      if (title == "") {
+      if (title.value.length == "") {
         alert("Error, please input a value");
       }
 
